@@ -1,4 +1,4 @@
-Write an interactive 3D OpenGL visualization of the Lorenz Attractor.
+This is an interactive 3D OpenGL visualization of the Lorenz Attractor.
 
 
 Key bindings
