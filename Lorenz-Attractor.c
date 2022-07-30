@@ -5,7 +5,7 @@
  * 2022-06-05
  */
 
-// Includes (from ex6)
+// Includes
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -13,24 +13,24 @@
 #include <GL/glew.h>
 #endif
 
-//  OpenGL with prototypes for glext (from ex6)
+//  OpenGL with prototypes for glext
 #define GL_GLEXT_PROTOTYPES
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 
-// Tell Xcode IDE to not gripe about OpenGL deprecation (from ex6)
+// Tell Xcode IDE to not gripe about OpenGL deprecation
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #else
 #include <GL/glut.h>
 #endif
 
-//  Default resolution (from ex6)
+//  Default resolution
 //  For Retina displays compile with -DRES=2
 #ifndef RES
 #define RES 1
 #endif
 
-//  Globals (changed some values from ex6)
+//  Globals
 int th=-63;       // Azimuth of view angle
 int ph=-47;       // Elevation of view angle
 int mode=2;     // Dimension (1-4)
@@ -45,7 +45,7 @@ double b  = (8/3);
 double r  = 99.96;
 
 /*
- *  Convenience routine to output raster text (from ex7)
+ *  Convenience routine to output raster text
  *  Use VARARGS to make this more flexible
  */
 #define LEN 8192  // Maximum length of text string
@@ -64,7 +64,7 @@ void Print(const char* format , ...)
 }
 
 /*
- *  Print message to stderr and exit (from ex7)
+ *  Print message to stderr and exit
  */
 void Fatal(const char* format , ...)
 {
@@ -76,7 +76,7 @@ void Fatal(const char* format , ...)
 }
 
 /*
- *  Check for OpenGL errors (from ex7)
+ *  Check for OpenGL errors
  */
 void ErrCheck(const char* where)
 {
@@ -84,7 +84,7 @@ void ErrCheck(const char* where)
    if (err) fprintf(stderr,"ERROR: %s [%s]\n",gluErrorString(err),where);
 }
 
-// (modified from lorenz.c with suggestions from Paul Hoffman)
+
 void lorenz()
 {
    int i;
@@ -116,7 +116,7 @@ void lorenz()
 }
 
 /*
- *  Display the scene (from ex6)
+ *  Display the scene
  */
 void display()
 {
@@ -135,7 +135,7 @@ void display()
    lorenz();
    glEnd();
 
-   //  Draw axes (modified colors from ex7)
+   //  Draw axes
    int len = 2.8;
    glColor3f(2.0,0.5,1.0);
    glBegin(GL_LINES);
@@ -146,7 +146,7 @@ void display()
    glVertex3d(0,0,0);
    glVertex3d(0,0,len);
    glEnd();
-   //  Label axes (from ex7)
+   //  Label axes
    glColor3f(1.0,0,1.0);
    glRasterPos3d(len,0,0);
    Print("X");
@@ -154,7 +154,7 @@ void display()
    Print("Y");
    glRasterPos3d(0,0,len);
    Print("Z");
-   //  Display parameters (changed mode and values displayed)
+   //  Display parameters
    glColor3f(1,0,1);
    glWindowPos2i(5,30);
    Print("View Angle=%d,%d",th,ph);
@@ -172,7 +172,7 @@ void display()
 }
 
 /*
- *  GLUT calls this routine when an arrow key is pressed (from ex7)
+ *  GLUT calls this routine when an arrow key is pressed
  */
 void special(int key,int x,int y)
 {
@@ -196,7 +196,7 @@ void special(int key,int x,int y)
 }
 
 /*
- *  GLUT calls this routine when a key is pressed (modified keys from ex7)
+ *  GLUT calls this routine when a key is pressed
  */
 void key(unsigned char ch,int x,int y)
 {
@@ -245,7 +245,7 @@ void key(unsigned char ch,int x,int y)
 }
 
 /*
- *  GLUT calls this routine when the window is resized (from ex7)
+ *  GLUT calls this routine when the window is resized
  */
 void reshape(int width,int height)
 {
@@ -266,7 +266,7 @@ void reshape(int width,int height)
 }
 
 /*
- *  Start up GLUT and tell it what to do (from ex7)
+ *  Start up GLUT and tell it what to do
  */
 int main(int argc,char* argv[])
 {
