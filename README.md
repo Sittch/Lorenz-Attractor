@@ -18,5 +18,5 @@ Key bindings<br/>
   <br/>
   ESC    Exit<br/>
 <br/>
-![demo](https://github.com/Sittch/Lorenz-Attractor/demo.gif)<br/>
+![demo](https://github.com/Sittch/Lorenz-Attractor/blob/main/demo.gif)<br/>
 <br/>
