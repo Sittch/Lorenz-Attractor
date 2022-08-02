@@ -2,6 +2,7 @@ This is an interactive 3D OpenGL visualization of the Lorenz Attractor.<br/>
 <br/>
 <br/>
 Key bindings<br/>
+<br/>
   w/W    Increase s value<br/>
   s/S    Decrease s value<br/>
   <br/>
