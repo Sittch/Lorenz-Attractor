@@ -1,6 +1,9 @@
 This is an interactive 3D OpenGL visualization of the Lorenz Attractor.<br/>
 <br/>
 <br/>
+![demo](https://github.com/Sittch/Lorenz-Attractor/blob/main/demo.gif)<br/>
+<br/>
+<br/>
 Key bindings<br/>
 <br/>
   w/W    Increase s value<br/>
@@ -18,6 +21,3 @@ Key bindings<br/>
   0      Reset view angle<br/>
   <br/>
   ESC    Exit<br/>
-<br/>
-![demo](https://github.com/Sittch/Lorenz-Attractor/blob/main/demo.gif)<br/>
-<br/>
